@@ -107,25 +107,10 @@ namespace sigslot {
 	class single_threaded
 	{
 	public:
-		single_threaded()
-		{
-			;
-		}
-
-		virtual ~single_threaded()
-		{
-			;
-		}
-
-		virtual void lock()
-		{
-			;
-		}
-
-		virtual void unlock()
-		{
-			;
-		}
+		single_threaded() {}
+		virtual ~single_threaded() {}
+		virtual void lock() {}
+		virtual void unlock() {}
 	};
 
 #ifdef _SIGSLOT_HAS_WIN32_THREADS
@@ -144,15 +129,8 @@ namespace sigslot {
 			}
 		}
 
-		multi_threaded_global(const multi_threaded_global&)
-		{
-			;
-		}
-
-		virtual ~multi_threaded_global()
-		{
-			;
-		}
+		multi_threaded_global(const multi_threaded_global&) {}
+		virtual ~multi_threaded_global() {}
 
 		virtual void lock()
 		{
@@ -215,15 +193,8 @@ namespace sigslot {
 			pthread_mutex_init(get_mutex(), NULL);
 		}
 
-		multi_threaded_global(const multi_threaded_global&)
-		{
-			;
-		}
-
-		virtual ~multi_threaded_global()
-		{
-			;
-		}
+		multi_threaded_global(const multi_threaded_global&) {}
+		virtual ~multi_threaded_global() {}
 
 		virtual void lock()
 		{
@@ -428,10 +399,7 @@ namespace sigslot {
 		typedef typename sender_set::const_iterator const_iterator;
 
 	public:
-		has_slots()
-		{
-			;
-		}
+		has_slots() {}
 
 		has_slots(const has_slots& hs)
 			: mt_policy(hs)
@@ -490,10 +458,7 @@ namespace sigslot {
 	public:
 		typedef std::list<_connection_base0<mt_policy> *>  connections_list;
 
-		_signal_base0()
-		{
-			;
-		}
+		_signal_base0() {}
 
 		_signal_base0(const _signal_base0& s)
 			: _signal_base<mt_policy>(s)
@@ -601,10 +566,7 @@ namespace sigslot {
 	public:
 		typedef std::list<_connection_base1<arg1_type, mt_policy> *>  connections_list;
 
-		_signal_base1()
-		{
-			;
-		}
+		_signal_base1() {}
 
 		_signal_base1(const _signal_base1<arg1_type, mt_policy>& s)
 			: _signal_base<mt_policy>(s)
@@ -714,10 +676,7 @@ namespace sigslot {
 		typedef std::list<_connection_base2<arg1_type, arg2_type, mt_policy> *>
 			connections_list;
 
-		_signal_base2()
-		{
-			;
-		}
+		_signal_base2() {}
 
 		_signal_base2(const _signal_base2<arg1_type, arg2_type, mt_policy>& s)
 			: _signal_base<mt_policy>(s)
@@ -826,10 +785,7 @@ namespace sigslot {
 		typedef std::list<_connection_base3<arg1_type, arg2_type, arg3_type, mt_policy> *>
 			connections_list;
 
-		_signal_base3()
-		{
-			;
-		}
+		_signal_base3() {}
 
 		_signal_base3(const _signal_base3<arg1_type, arg2_type, arg3_type, mt_policy>& s)
 			: _signal_base<mt_policy>(s)
@@ -938,10 +894,7 @@ namespace sigslot {
 		typedef std::list<_connection_base4<arg1_type, arg2_type, arg3_type,
 			arg4_type, mt_policy> *>  connections_list;
 
-		_signal_base4()
-		{
-			;
-		}
+		_signal_base4() {}
 
 		_signal_base4(const _signal_base4<arg1_type, arg2_type, arg3_type, arg4_type, mt_policy>& s)
 			: _signal_base<mt_policy>(s)
@@ -1051,10 +1004,7 @@ namespace sigslot {
 		typedef std::list<_connection_base5<arg1_type, arg2_type, arg3_type,
 			arg4_type, arg5_type, mt_policy> *>  connections_list;
 
-		_signal_base5()
-		{
-			;
-		}
+		_signal_base5() {}
 
 		_signal_base5(const _signal_base5<arg1_type, arg2_type, arg3_type, arg4_type,
 			arg5_type, mt_policy>& s)
@@ -1165,10 +1115,7 @@ namespace sigslot {
 		typedef std::list<_connection_base6<arg1_type, arg2_type, arg3_type, 
 			arg4_type, arg5_type, arg6_type, mt_policy> *>  connections_list;
 
-		_signal_base6()
-		{
-			;
-		}
+		_signal_base6() {}
 
 		_signal_base6(const _signal_base6<arg1_type, arg2_type, arg3_type, arg4_type,
 			arg5_type, arg6_type, mt_policy>& s)
@@ -1279,10 +1226,7 @@ namespace sigslot {
 		typedef std::list<_connection_base7<arg1_type, arg2_type, arg3_type, 
 			arg4_type, arg5_type, arg6_type, arg7_type, mt_policy> *>  connections_list;
 
-		_signal_base7()
-		{
-			;
-		}
+		_signal_base7() {}
 
 		_signal_base7(const _signal_base7<arg1_type, arg2_type, arg3_type, arg4_type,
 			arg5_type, arg6_type, arg7_type, mt_policy>& s)
@@ -1919,16 +1863,11 @@ namespace sigslot {
 	class signal0 : public _signal_base0<mt_policy>
 	{
 	public:
-		signal0()
-		{
-			;
-		}
+		signal0() {}
 
 		signal0(const signal0<mt_policy>& s)
 			: _signal_base0<mt_policy>(s)
-		{
-			;
-		}
+		{}
 
 		template<class desttype>
 			void connect(desttype* pclass, void (desttype::*pmemfun)())
@@ -1979,16 +1918,11 @@ namespace sigslot {
 	class signal1 : public _signal_base1<arg1_type, mt_policy>
 	{
 	public:
-		signal1()
-		{
-			;
-		}
+		signal1() {}
 
 		signal1(const signal1<arg1_type, mt_policy>& s)
 			: _signal_base1<arg1_type, mt_policy>(s)
-		{
-			;
-		}
+		{}
 
 		template<class desttype>
 			void connect(desttype* pclass, void (desttype::*pmemfun)(arg1_type))
@@ -2039,16 +1973,11 @@ namespace sigslot {
 	class signal2 : public _signal_base2<arg1_type, arg2_type, mt_policy>
 	{
 	public:
-		signal2()
-		{
-			;
-		}
+		signal2() {}
 
 		signal2(const signal2<arg1_type, arg2_type, mt_policy>& s)
 			: _signal_base2<arg1_type, arg2_type, mt_policy>(s)
-		{
-			;
-		}
+		{}
 
 		template<class desttype>
 			void connect(desttype* pclass, void (desttype::*pmemfun)(arg1_type,
@@ -2100,16 +2029,11 @@ namespace sigslot {
 	class signal3 : public _signal_base3<arg1_type, arg2_type, arg3_type, mt_policy>
 	{
 	public:
-		signal3()
-		{
-			;
-		}
+		signal3() {}
 
 		signal3(const signal3<arg1_type, arg2_type, arg3_type, mt_policy>& s)
 			: _signal_base3<arg1_type, arg2_type, arg3_type, mt_policy>(s)
-		{
-			;
-		}
+		{}
 
 		template<class desttype>
 			void connect(desttype* pclass, void (desttype::*pmemfun)(arg1_type,
@@ -2163,16 +2087,11 @@ namespace sigslot {
 		arg4_type, mt_policy>
 	{
 	public:
-		signal4()
-		{
-			;
-		}
+		signal4() {}
 
 		signal4(const signal4<arg1_type, arg2_type, arg3_type, arg4_type, mt_policy>& s)
 			: _signal_base4<arg1_type, arg2_type, arg3_type, arg4_type, mt_policy>(s)
-		{
-			;
-		}
+		{}
 
 		template<class desttype>
 			void connect(desttype* pclass, void (desttype::*pmemfun)(arg1_type,
@@ -2227,18 +2146,13 @@ namespace sigslot {
 		arg4_type, arg5_type, mt_policy>
 	{
 	public:
-		signal5()
-		{
-			;
-		}
+		signal5() {}
 
 		signal5(const signal5<arg1_type, arg2_type, arg3_type, arg4_type,
 			arg5_type, mt_policy>& s)
 			: _signal_base5<arg1_type, arg2_type, arg3_type, arg4_type,
 			arg5_type, mt_policy>(s)
-		{
-			;
-		}
+		{}
 
 		template<class desttype>
 			void connect(desttype* pclass, void (desttype::*pmemfun)(arg1_type,
@@ -2296,18 +2210,13 @@ namespace sigslot {
 		arg4_type, arg5_type, arg6_type, mt_policy>
 	{
 	public:
-		signal6()
-		{
-			;
-		}
+		signal6() {}
 
 		signal6(const signal6<arg1_type, arg2_type, arg3_type, arg4_type,
 			arg5_type, arg6_type, mt_policy>& s)
 			: _signal_base6<arg1_type, arg2_type, arg3_type, arg4_type,
 			arg5_type, arg6_type, mt_policy>(s)
-		{
-			;
-		}
+		{}
 
 		template<class desttype>
 			void connect(desttype* pclass, void (desttype::*pmemfun)(arg1_type,
@@ -2365,18 +2274,13 @@ namespace sigslot {
 		arg4_type, arg5_type, arg6_type, arg7_type, mt_policy>
 	{
 	public:
-		signal7()
-		{
-			;
-		}
+		signal7() {}
 
 		signal7(const signal7<arg1_type, arg2_type, arg3_type, arg4_type,
 			arg5_type, arg6_type, arg7_type, mt_policy>& s)
 			: _signal_base7<arg1_type, arg2_type, arg3_type, arg4_type,
 			arg5_type, arg6_type, arg7_type, mt_policy>(s)
-		{
-			;
-		}
+		{}
 
 		template<class desttype>
 			void connect(desttype* pclass, void (desttype::*pmemfun)(arg1_type,
@@ -2435,18 +2339,13 @@ namespace sigslot {
 		arg4_type, arg5_type, arg6_type, arg7_type, arg8_type, mt_policy>
 	{
 	public:
-		signal8()
-		{
-			;
-		}
+		signal8() {}
 
 		signal8(const signal8<arg1_type, arg2_type, arg3_type, arg4_type,
 			arg5_type, arg6_type, arg7_type, arg8_type, mt_policy>& s)
 			: _signal_base8<arg1_type, arg2_type, arg3_type, arg4_type,
 			arg5_type, arg6_type, arg7_type, arg8_type, mt_policy>(s)
-		{
-			;
-		}
+		{}
 
 		template<class desttype>
 			void connect(desttype* pclass, void (desttype::*pmemfun)(arg1_type,
